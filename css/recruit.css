@@ -1,0 +1,46 @@
+.recruit__firstview {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  background: #1d1d1d;
+}
+
+.recruit__firstview h1 {
+  position: absolute;
+  top: 20%;
+  left: -35px;
+  font-size: 150px;
+  color: #fff;
+}
+
+.recruit__firstview-text {
+  position: absolute;
+  top: 37%;
+  right: 35px;
+}
+
+.recruit__title {
+  font-size: 30px;
+  color: #fff;
+}
+
+.recruit__sub-title {
+  font-size: 18px;
+  color: #fff;
+}
+
+/* recruit-index.html */
+table {
+  width: 60%;
+  border-collapse: collapse;
+}
+table th,
+table td {
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+table th {
+  font-weight: bold;
+  background-color: #dedede;
+}
