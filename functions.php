@@ -3,6 +3,7 @@ function twpp_enqueue_styles()
 {
   wp_enqueue_style('reset-sheet', get_template_directory_uri() . "/css/reset.css");
   wp_enqueue_style('main-style-sheet', get_template_directory_uri() . "/style.css");
+  wp_enqueue_style('reset-sheet', get_template_directory_uri() . "/css/contact.css");
 }
 add_action('wp_enqueue_scripts', 'twpp_enqueue_styles');
 
@@ -21,3 +22,9 @@ function twpp_enqueue_scripts()
 add_action('wp_enqueue_scripts', 'twpp_enqueue_scripts');
 
 add_theme_support('post-thumbnails');
+
+add_action('after_setup_theme', 'register_menu');
+function register_menu()
+{
+  register_nav_menu('primary', __('Primary Menu', 'theme-slug'));
+}

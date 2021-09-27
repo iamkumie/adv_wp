@@ -8,6 +8,9 @@
   <title>株式会社estra</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="style.css">
+  <?php if (is_page()) : ?>
+    <link rel="stylesheet" href="css/contact.css" />
+  <?php endif; ?>
   <?php wp_head(); ?>
 </head>
 
@@ -31,7 +34,7 @@
           <a href="recruit/index.html">RECRUIT</a>
         </li>
         <li class="header__nav-item">
-          <a href="contact.html">CONTACT</a>
+          <a href="<?php echo home_url("contact"); ?>">CONTACT</a>
         </li>
       </ul>
     </nav>

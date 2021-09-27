@@ -1,7 +1,8 @@
 <?php get_header(); ?>
 <main>
   <div class="bg-video-wrap">
-    <video src="<?php echo get_template_directory_uri(); ?>img/pexels-mikhail-nilov-7989671.mp4" loop muted autoplay>
+    <video loop muted autoplay>
+      <source src="./img/pexels-mikhail-nilov-7989671.mp4" type="video/mp4">
     </video>
     <div class="overlay">
     </div>
@@ -30,9 +31,9 @@
     <!-- news -->
     <div class="news">
       <h2 class="menu__title">NEWS<span>ニュース</span></h2>
-      <?php if (have_posts()) : ?>
-        <?php while (have_posts()) : the_post(); ?>
-          <div class="news__wrapper">
+      <div class="news__wrapper">
+        <?php if (have_posts()) : ?>
+          <?php while (have_posts()) : the_post(); ?>
             <div class="news__card">
               <div class="news__content-img">
                 <?php if (has_post_thumbnail()) : ?>
@@ -54,11 +55,11 @@
                 </h3>
               </div>
             </div>
-          </div>
-        <?php endwhile; ?>
-      <?php else : ?>
-        <p>投稿が見つかりません。</p>
-      <?php endif; ?>
+          <?php endwhile; ?>
+        <?php else : ?>
+          <p>投稿が見つかりません。</p>
+        <?php endif; ?>
+      </div>
       <div class="menu__button">
         <a href="news.html" class="btn btn-svg">
           <svg>
